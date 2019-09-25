@@ -8,5 +8,10 @@
     "name": "package.to.scan.domain",
     "type": "java.lang.String",
     "description": "Package containing data classes"
+  },
+  {
+    "name": "package.to.scan.service",
+    "type": "java.lang.String",
+    "description": "Package containing Services"
   }
 ]}
