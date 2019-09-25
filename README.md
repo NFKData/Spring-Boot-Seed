@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- **Version**: 3.0
+- **Version**: 3.1
 - **GroupId**: com.nfkdata
 - **ArtifactId**: springboot-seed
 
@@ -22,12 +22,13 @@
 
 ## Current properties
 
-| Property                    | Description                              |
-|-----------------------------|------------------------------------------|
-| spring.application.name     | Name for the current application         |
-| server.servlet.context-path | Context path for the current application |
-| package.to.scan.rest        | Package containing REST controllers      |
-| package.to.scan.domain      | Package containing data classes          |
+| Property                     | Description                                 |
+|------------------------------|---------------------------------------------|
+| spring.application.name      | Name for the current application            |
+| server.servlet.context-path  | Context path for the current application    |
+| package.to.scan.rest         | Package containing REST controllers         |
+| package.to.scan.domain       | Package containing data classes             |
+| package.to.scan.service      | Package containing business logic Services  |
 
 ## Needed development environment
 
@@ -53,3 +54,5 @@ If some fixes are added with a feature release, it will be just `Feature Release
 	- Added right unit tests for Application Launcher
 - `3.0`
 	- Added services to code
+- `3.1`
+	- Added new property on documentation

@@ -12,6 +12,6 @@
   {
     "name": "package.to.scan.service",
     "type": "java.lang.String",
-    "description": "Package containing Services"
+    "description": "Package containing business logic Services"
   }
 ]}
