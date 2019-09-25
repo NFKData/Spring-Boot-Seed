@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- **Version**: 1.0
+- **Version**: 2.0
 - **GroupId**: com.nfkdata
 - **ArtifactId**: springboot-seed
 
@@ -33,7 +33,18 @@
 - OpenJDK 11: [Windows](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip), [MAC](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_osx-x64_bin.tar.gz), [Linux](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz)
 - [Lombok IDE processing on Eclipse and IntelliJ](https://www.baeldung.com/lombok-ide) `Just for development purposes, not needed for compilation`
 
+## Versioning convention
+
+For the versioning of this project is used the following convention:
+
+`Feature Release`.`Fixes`
+
+If some fixes are added with a feature release, it will be just `Feature Release`.0
+
 ## Changelog
 
 - `1.0`
 	- Creation of the seed
+- `2.0`
+	- Added Github Action for Maven build
+	- Added Versioning convention on documentation

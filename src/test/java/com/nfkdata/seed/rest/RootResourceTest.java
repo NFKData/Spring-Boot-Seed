@@ -52,7 +52,7 @@ public class RootResourceTest {
 		Method welcomeMethod = RootResource.class.getDeclaredMethod(WELCOME_METHOD_NAME);
 		assertEquals(1, welcomeMethod.getDeclaredAnnotations().length);
 		assertTrue(welcomeMethod.isAnnotationPresent(GetMapping.class));
-		assertEquals(WELCOME_METHOD_PRODUCES, welcomeMethod.getDeclaredAnnotation(GetMapping.class).produces());
+		assertEquals(WELCOME_METHOD_PRODUCES, welcomeMethod.getDeclaredAnnotation(GetMapping.class).produces()[0]);
 	}
 	
 	@Test
