@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- **Version**: 2.0
+- **Version**: 2.1
 - **GroupId**: com.nfkdata
 - **ArtifactId**: springboot-seed
 
@@ -48,3 +48,5 @@ If some fixes are added with a feature release, it will be just `Feature Release
 - `2.0`
 	- Added Github Action for Maven build
 	- Added Versioning convention on documentation
+- `2.1`
+	- Added right unit tests for Application Launcher
