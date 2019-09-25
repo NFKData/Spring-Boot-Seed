@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- **Version**: 2.1
+- **Version**: 3.0
 - **GroupId**: com.nfkdata
 - **ArtifactId**: springboot-seed
 
@@ -12,6 +12,7 @@
 	- **com.nfkdata.seed**: Contains the whole application and **SpringBootApplicationLauncher** on the root of the package
 	- **com.nfkdata.seed.domain**: Contains Data Classes with Lombok annotations
 	- **com.nfkdata.seed.rest**: Contains Root Endpoint
+	- **com.nfkdata.seed.service**: Contains business logic services
 	- **META-INF**: Contains metadata for custom application properties
 - `src/main/resources`
 	- **application.properties**: File containing some spring properties
@@ -50,3 +51,5 @@ If some fixes are added with a feature release, it will be just `Feature Release
 	- Added Versioning convention on documentation
 - `2.1`
 	- Added right unit tests for Application Launcher
+- `3.0`
+	- Added services to code

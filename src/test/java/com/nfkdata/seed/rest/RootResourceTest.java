@@ -1,16 +1,15 @@
 package com.nfkdata.seed.rest;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nfkdata.seed.domain.Welcome;
+import com.nfkdata.seed.service.RootService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -26,19 +26,18 @@ public class RootResourceTest {
 
 	private static final String WELCOME_METHOD_NAME = "welcome";
 	private static final String WELCOME_METHOD_PRODUCES = "application/json";
-
-	private static final String APPLICATION_NAME_FIELD_NAME = "applicationName";
-
-	@Autowired
-	RootResource underTest;
 	
-	@Value("${spring.application.name}")
-	String applicationName;
+	@Mock
+	RootService rootService;
+	
+	@InjectMocks
+	RootResource underTest;
 	
 	@Test
 	public void testWelcome() {
+		Mockito.when(rootService.buildWelcome()).thenReturn(new Welcome("Welcome to application name"));
 		ResponseEntity<Welcome> response = underTest.welcome();
-		assertEquals("Welcome to " + applicationName, response.getBody().getText());
+		assertTrue(response.getBody().getText().contains("Welcome to "));
 	}
 	
 	@Test
@@ -55,12 +54,6 @@ public class RootResourceTest {
 		assertEquals(WELCOME_METHOD_PRODUCES, welcomeMethod.getDeclaredAnnotation(GetMapping.class).produces()[0]);
 	}
 	
-	@Test
-	public void verifyApplicationNameField() throws NoSuchFieldException, SecurityException {
-		Field applicationNameField = RootResource.class.getDeclaredField(APPLICATION_NAME_FIELD_NAME);
-		assertNotNull(applicationNameField);
-		assertEquals(1, applicationNameField.getDeclaredAnnotations().length);
-		assertTrue(applicationNameField.isAnnotationPresent(Value.class));
-	}
+	
 
 }
