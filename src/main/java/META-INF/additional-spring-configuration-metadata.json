@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "package.to.scan.rest",
+    "type": "java.lang.String",
+    "description": "Package containing REST controllers"
+  },
+  {
+    "name": "package.to.scan.domain",
+    "type": "java.lang.String",
+    "description": "Package containing data classes"
+  }
+]}
