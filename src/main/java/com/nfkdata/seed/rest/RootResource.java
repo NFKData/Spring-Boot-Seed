@@ -12,7 +12,7 @@ import com.nfkdata.seed.service.RootService;
 /**
  * Rest Controller for / path
  */
-@RestController
+@RestController("/")
 public class RootResource {
 	
 	/**
