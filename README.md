@@ -56,3 +56,5 @@ If some fixes are added with a feature release, it will be just `Feature Release
 	- Added services to code
 - `3.1`
 	- Added new property on documentation
+- `4.0`
+	- Added Readiness and Liveness Probes 
