@@ -1,5 +1,15 @@
 # Seed project
 
+## Summary
+
+- [Metadata](#metadata)
+- [Current Architecture](#current-architecture)
+- [Current properties](#current-properties)
+- [Needed development environment](#needed-development-environment)
+- [Versioning convention](#versioning-convention)
+- [Readiness and Liveness probes](#readiness-and-liveness-probes)
+- [Changelog](#changelog)
+
 ## Metadata
 
 - **Version**: 3.1
@@ -43,6 +53,12 @@ For the versioning of this project is used the following convention:
 
 If some fixes are added with a feature release, it will be just `Feature Release`.0
 
+## Readiness and Liveness probes
+
+For checking if the application is alive, the `/${server.servlet.context-path}/actuator/live` should be called.
+
+For checking if the application is ready, the `/${server.servlet.context-path}/actuator/ready` should be called.
+
 ## Changelog
 
 - `1.0`
@@ -57,4 +73,6 @@ If some fixes are added with a feature release, it will be just `Feature Release
 - `3.1`
 	- Added new property on documentation
 - `4.0`
-	- Added Readiness and Liveness Probes 
+	- Added Readiness and Liveness Probes
+- `4.1`
+	- Added documentation about Readiness and Liveness Proves 
