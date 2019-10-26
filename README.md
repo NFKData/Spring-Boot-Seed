@@ -19,7 +19,7 @@
 
 ## Endpoints
 
-To see documentation about endpoints visit `/api/swagger-ui`.
+To see documentation about endpoints visit `/${server.servlet.context-path}/swagger-ui`.
 
 ## Readiness and Liveness probes
 
@@ -84,7 +84,7 @@ If some fixes are added with a feature release, it will be just `Feature Release
 	- Added documentation about Readiness and Liveness Proves 
 - `5.0`
 	- Added OpenAPI implementation
-	- Added Swagger-ui under `/api/swagger-ui`
+	- Added Swagger-ui under `/${server.servlet.context-path}/swagger-ui`
 	- Added documentation about swagger-ui and endpoints
 	- Sorting of documentation
-	- Bugfix: When visiting almost every endpoint, will return /api/ response
+	- Bugfix: When visiting almost every endpoint, will return /${server.servlet.context-path}/ response
