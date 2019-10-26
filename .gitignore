@@ -30,3 +30,6 @@ build/
 ### Eclipse ###
 .project/
 .settings/
+
+### Logging ###
+logs/**
