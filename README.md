@@ -22,6 +22,7 @@
 	- **com.nfkdata.seed**: Contains the whole application and **SpringBootApplicationLauncher** on the root of the package
 	- **com.nfkdata.seed.domain**: Contains Data Classes with Lombok annotations
 	- **com.nfkdata.seed.rest**: Contains Root Endpoint
+	- **com.nfkdata.seed.rest.probes**: Contains Readiness and Liveness probes
 	- **com.nfkdata.seed.service**: Contains business logic services
 	- **META-INF**: Contains metadata for custom application properties
 - `src/main/resources`
