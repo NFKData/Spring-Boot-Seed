@@ -3,18 +3,29 @@
 ## Summary
 
 - [Metadata](#metadata)
+- [Endpoints](#endpoints)
+- [Readiness and Liveness probes](#readiness-and-liveness-probes)
 - [Current Architecture](#current-architecture)
 - [Current properties](#current-properties)
 - [Needed development environment](#needed-development-environment)
 - [Versioning convention](#versioning-convention)
-- [Readiness and Liveness probes](#readiness-and-liveness-probes)
 - [Changelog](#changelog)
 
 ## Metadata
 
-- **Version**: 4.1
+- **Version**: 5.0
 - **GroupId**: com.nfkdata
 - **ArtifactId**: springboot-seed
+
+## Endpoints
+
+To see documentation about endpoints visit `/${server.servlet.context-path}/swagger-ui`.
+
+## Readiness and Liveness probes
+
+For checking if the application is alive, the `/${server.servlet.context-path}/actuator/live` should be called.
+
+For checking if the application is ready, the `/${server.servlet.context-path}/actuator/ready` should be called.
 
 ## Current Architecture
 
@@ -54,12 +65,6 @@ For the versioning of this project is used the following convention:
 
 If some fixes are added with a feature release, it will be just `Feature Release`.0
 
-## Readiness and Liveness probes
-
-For checking if the application is alive, the `/${server.servlet.context-path}/actuator/live` should be called.
-
-For checking if the application is ready, the `/${server.servlet.context-path}/actuator/ready` should be called.
-
 ## Changelog
 
 - `1.0`
@@ -77,3 +82,9 @@ For checking if the application is ready, the `/${server.servlet.context-path}/a
 	- Added Readiness and Liveness Probes
 - `4.1`
 	- Added documentation about Readiness and Liveness Proves 
+- `5.0`
+	- Added OpenAPI implementation
+	- Added Swagger-ui under `/${server.servlet.context-path}/swagger-ui`
+	- Added documentation about swagger-ui and endpoints
+	- Sorting of documentation
+	- Bugfix: When visiting almost every endpoint, will return /${server.servlet.context-path}/ response

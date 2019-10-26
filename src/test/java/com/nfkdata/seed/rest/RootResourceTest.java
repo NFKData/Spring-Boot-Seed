@@ -19,11 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.nfkdata.seed.domain.Welcome;
 import com.nfkdata.seed.service.RootService;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RootResourceTest {
 
 
+	private static final String WELCOME_ENDPOINT_PATH = "/";
 	private static final String WELCOME_METHOD_NAME = "welcome";
 	private static final String WELCOME_METHOD_PRODUCES = "application/json";
 	
@@ -48,12 +51,12 @@ public class RootResourceTest {
 	
 	@Test
 	public void verifyWelcomeMethodAnnotations() throws NoSuchMethodException, SecurityException {
-		Method welcomeMethod = RootResource.class.getDeclaredMethod(WELCOME_METHOD_NAME);
-		assertEquals(1, welcomeMethod.getDeclaredAnnotations().length);
+		Method welcomeMethod = IRootResource.class.getDeclaredMethod(WELCOME_METHOD_NAME);
+		assertEquals(2, welcomeMethod.getDeclaredAnnotations().length);
+		assertTrue(welcomeMethod.isAnnotationPresent(Operation.class));
 		assertTrue(welcomeMethod.isAnnotationPresent(GetMapping.class));
 		assertEquals(WELCOME_METHOD_PRODUCES, welcomeMethod.getDeclaredAnnotation(GetMapping.class).produces()[0]);
+		assertEquals(WELCOME_ENDPOINT_PATH, welcomeMethod.getDeclaredAnnotation(GetMapping.class).path()[0]);
 	}
 	
-	
-
 }
