@@ -15,7 +15,7 @@
 
 ## Metadata
 
-- **Version**: 0.6.0
+- **Version**: 1.0.0
 - **GroupId**: com.nfkdata
 - **ArtifactId**: springboot-seed
 
@@ -101,5 +101,6 @@ If some fixes are added with a feature release, it will be just `Major Release`.
     - Created interceptor for logging requests
 - `0.6.1`
   - Added documentation for `0.6.0`
-  - Added request processing time on debug logs
-  - Removed aspects
+- `1.0.0`
+  - Added Dockerfile for Dockerizing image
+  - Added port on application.properties
