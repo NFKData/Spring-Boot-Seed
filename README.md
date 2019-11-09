@@ -109,3 +109,5 @@ If some fixes are added with a feature release, it will be just `Major Release`.
 - `1.0.0`
   - Added Dockerfile for Dockerizing image
   - Added port on application.properties
+- `1.1.0`
+  - Added script for Docker managing
