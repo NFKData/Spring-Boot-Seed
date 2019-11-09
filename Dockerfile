@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-ARG JAR_FILE=springboot-seed-1.0.0.jar
+ARG JAR_FILE=springboot-seed-1.1.0.jar
 ENV JAR_FILE=${JAR_FILE}
 
 USER root
