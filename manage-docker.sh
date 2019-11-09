@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function build_image {
-    docker build -t nfkdata/spring-boot-seed:${TAG_NAME} .
+    docker build -t nfkdata/spring-boot-seed:${TAG_NAME} --build-arg JAR_FILE=spring-boot-seed-${TAG_NAME}.jar .
 }
 
 function push_image {

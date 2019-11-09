@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nfkdata</groupId>
-	<artifactId>springboot-seed</artifactId>
+	<artifactId>spring-boot-seed</artifactId>
 	<version>1.1.0</version>
 	<name>seed</name>
 	<description>Seed project for new projects</description>
