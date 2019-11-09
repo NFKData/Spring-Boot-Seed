@@ -48,13 +48,18 @@ For checking if the application is ready, the `/${server.servlet.context-path}/a
 
 ## Current properties
 
-| Property                     | Description                                 |
-|------------------------------|---------------------------------------------|
-| spring.application.name      | Name for the current application            |
-| server.servlet.context-path  | Context path for the current application    |
-| package.to.scan.rest         | Package containing REST controllers         |
-| package.to.scan.domain       | Package containing data classes             |
-| package.to.scan.service      | Package containing business logic Services  |
+| Property                                     | Description                                 |
+|----------------------------------------------|---------------------------------------------|
+| spring.application.name                      | Name for the current application            |
+| server.servlet.context-path                  | Context path for the current application    |
+| server.port                                  | Port where the application will be exposed  |
+| management.endpoints.web.path-mapping.health | Liveness probe endpoint                     |
+| management.endpoints.web.exposure.include    | Actuator endpoints to expose                |
+| package.to.scan.rest                         | Package containing REST controllers         |
+| package.to.scan.domain                       | Package containing data classes             |
+| package.to.scan.service                      | Package containing business logic Services  |
+| package.to.scan.interceptor                  | Package containing interceptors             |
+| package.to.scan.config                       | Package continaing configuration classes    |
 
 ## Needed development environment
 
