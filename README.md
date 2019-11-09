@@ -2,18 +2,20 @@
 
 ## Summary
 
-- [Metadata](#metadata)
-- [Endpoints](#endpoints)
-- [Readiness and Liveness probes](#readiness-and-liveness-probes)
-- [Current Architecture](#current-architecture)
-- [Current properties](#current-properties)
-- [Needed development environment](#needed-development-environment)
-- [Versioning convention](#versioning-convention)
-- [Changelog](#changelog)
+- [Seed project](#seed-project)
+	- [Summary](#summary)
+	- [Metadata](#metadata)
+	- [Endpoints](#endpoints)
+	- [Readiness and Liveness probes](#readiness-and-liveness-probes)
+	- [Current Architecture](#current-architecture)
+	- [Current properties](#current-properties)
+	- [Needed development environment](#needed-development-environment)
+	- [Versioning convention](#versioning-convention)
+	- [Changelog](#changelog)
 
 ## Metadata
 
-- **Version**: 5.0
+- **Version**: 0.6.0
 - **GroupId**: com.nfkdata
 - **ArtifactId**: springboot-seed
 
@@ -31,7 +33,9 @@ For checking if the application is ready, the `/${server.servlet.context-path}/a
 
 - `src/main/java`
 	- **com.nfkdata.seed**: Contains the whole application and **SpringBootApplicationLauncher** on the root of the package
+	- **com.nfkdata.seed.config**: Contains programmatic configuration classes
 	- **com.nfkdata.seed.domain**: Contains Data Classes with Lombok annotations
+	- **com.nfkdata.seed.interceptor**: Contains interceptors for the application
 	- **com.nfkdata.seed.rest**: Contains Root Endpoint
 	- **com.nfkdata.seed.rest.probes**: Contains Readiness and Liveness probes
 	- **com.nfkdata.seed.service**: Contains business logic services
@@ -61,9 +65,9 @@ For checking if the application is ready, the `/${server.servlet.context-path}/a
 
 For the versioning of this project is used the following convention:
 
-`Feature Release`.`Fixes`
+`Major Release`.`Feature Release`.`Fixes`
 
-If some fixes are added with a feature release, it will be just `Feature Release`.0
+If some fixes are added with a feature release, it will be just `Major Release`.`Feature Release`.0
 
 ## Changelog
 
@@ -88,3 +92,14 @@ If some fixes are added with a feature release, it will be just `Feature Release
 	- Added documentation about swagger-ui and endpoints
 	- Sorting of documentation
 	- Bugfix: When visiting almost every endpoint, will return /${server.servlet.context-path}/ response
+- `0.6.0`
+    - Changed versioning convention
+    - Added Log4J2 support
+    - Logging INFO on default file and console
+    - Logging DEBUG on debug file
+    - Created packages for interceptors and config
+    - Created interceptor for logging requests
+- `0.6.1`
+  - Added documentation for `0.6.0`
+  - Added request processing time on debug logs
+  - Removed aspects

@@ -5,9 +5,19 @@
     "description": "Package containing REST controllers"
   },
   {
+ 	"name": "package.to.scan.config",
+    "type": "java.lang.String",
+    "description": "Package containing configuration classes"
+  },
+  {
     "name": "package.to.scan.domain",
     "type": "java.lang.String",
     "description": "Package containing data classes"
+  },
+  {
+  	"name": "package.to.scan.interceptor",
+    "type": "java.lang.String",
+    "description": "Package containing interceptor classes"
   },
   {
     "name": "package.to.scan.service",
